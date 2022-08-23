@@ -6,4 +6,6 @@ class QuotesTest < ApplicationSystemTestCase
   #
   #   assert_selector "h1", text: "Quotes"
   # end
+
+  
 end
