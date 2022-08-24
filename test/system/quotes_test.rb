@@ -6,10 +6,14 @@ class QuotesTest < ApplicationSystemTestCase
   #
   #   assert_selector "h1", text: "Quotes"
   # end
+ 
   setup do
-  # We need to order quote as well in the system tests
-  @quote = Quote.ordered.first
+    # We need to order quote as well in the system tests
+    login_as users(:accountant)
+    @quote = Quote.ordered.first
   end
+
+  
 
   test "Showing a quote" do
     visit quotes_path

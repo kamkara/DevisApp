@@ -32,7 +32,7 @@ gem "cssbundling-rails"
 #       PROJECT GEMS                        #
 #############################################
 gem "simple_form", "~> 5.1.0"
-
+gem "devise", "~> 4.8.1"
 
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
