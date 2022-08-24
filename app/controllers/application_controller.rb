@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+    #Require User Authenticate on all page  except devise's
     before_action :authenticate_user!, unless: :devise_controller?
 
     private
