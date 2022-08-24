@@ -29,6 +29,8 @@ class LineItemSystemTest < ApplicationSystemTestCase
     assert_selector "h1", text: "First quote"
     assert_text "Animation"
     assert_text number_to_currency(1234)
+    #Total price
+  assert_text number_to_currency(@quote.total_price)
   end
 
   test "Updating a line item date" do
@@ -44,6 +46,8 @@ class LineItemSystemTest < ApplicationSystemTestCase
   click_on "Update date"
 
   assert_text I18n.l(Date.current + 1.day, format: :long)
+  #Total price
+  assert_text number_to_currency(@quote.total_price)
 end
 
 test "Destroying a line item date" do
@@ -56,6 +60,8 @@ test "Destroying a line item date" do
   end
 
   assert_no_text I18n.l(Date.current, format: :long)
+  #Total price
+  assert_text number_to_currency(@quote.total_price)
 end
   
 end
